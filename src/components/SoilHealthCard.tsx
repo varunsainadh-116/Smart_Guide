@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Soil } from "lucide-react";
+import { Leaf } from "lucide-react";
 
 interface SoilHealthCardProps {
   ph: number;
@@ -24,7 +24,7 @@ const SoilHealthCard = ({ ph, nitrogen, phosphorus, potassium }: SoilHealthCardP
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl font-semibold flex items-center gap-2">
-            <Soil className="h-5 w-5 text-farm-soil" />
+            <Leaf className="h-5 w-5 text-farm-soil" />
             Soil Health
           </CardTitle>
         </div>

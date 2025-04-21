@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Fertilizer, TreeDeciduous } from "lucide-react";
+import { Sprout, TreeDeciduous } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface FertilizerRecommendationProps {
@@ -177,7 +177,7 @@ const FertilizerRecommendation = ({ crop, soilData, weatherData }: FertilizerRec
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl font-semibold flex items-center gap-2">
-            <Fertilizer className="h-5 w-5 text-farm-leaf" />
+            <Sprout className="h-5 w-5 text-farm-leaf" />
             Fertilizer Recommendation
           </CardTitle>
         </div>
