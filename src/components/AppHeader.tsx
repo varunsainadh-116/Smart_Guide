@@ -27,10 +27,6 @@ const AppHeader = () => {
               Make data-driven decisions for sustainable farming with personalized fertilizer recommendations
             </p>
           </div>
-          
-          {/* Decorative Elements */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20" />
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         </div>
       </div>
     </header>
