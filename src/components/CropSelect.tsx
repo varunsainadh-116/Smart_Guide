@@ -17,11 +17,11 @@ const CropSelect = ({ onSelectCrop }: CropSelectProps) => {
   };
 
   return (
-    <Card className="farm-shadow">
+    <Card className="farm-shadow glass-card">
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl font-semibold flex items-center gap-2">
-            <Sprout className="h-5 w-5 text-farm-leaf-dark" />
+            <Sprout className="h-5 w-5 text-farm-leaf-dark interactive-pulse" />
             Crop Selection
           </CardTitle>
         </div>

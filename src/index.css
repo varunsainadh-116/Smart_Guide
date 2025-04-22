@@ -96,11 +96,40 @@
 }
 
 .card-gradient {
-  background: linear-gradient(145deg, rgba(255,255,255,0.8) 0%, rgba(240,240,240,0.5) 100%);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  @apply bg-gradient-to-br from-card to-secondary/80 backdrop-blur-sm;
 }
 
 .farm-shadow {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  @apply shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300;
+}
+
+/* Card hover effects */
+.card {
+  @apply transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1;
+}
+
+/* Subtle pulse animation for interactive elements */
+.interactive-pulse {
+  @apply hover:animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite];
+}
+
+/* Custom animation for fade-in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Glass effect for cards */
+.glass-card {
+  @apply bg-white/50 dark:bg-gray-950/50 backdrop-blur-lg border border-white/20 dark:border-white/10;
 }

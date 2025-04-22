@@ -20,11 +20,11 @@ const SoilHealthCard = ({ ph, nitrogen, phosphorus, potassium }: SoilHealthCardP
   };
 
   return (
-    <Card className="farm-shadow">
+    <Card className="farm-shadow glass-card">
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl font-semibold flex items-center gap-2">
-            <Leaf className="h-5 w-5 text-farm-soil" />
+            <Leaf className="h-5 w-5 text-farm-soil interactive-pulse" />
             Soil Health
           </CardTitle>
         </div>
