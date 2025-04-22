@@ -7,7 +7,6 @@ import WeatherInfo from "@/components/WeatherInfo";
 import FertilizerRecommendation from "@/components/FertilizerRecommendation";
 
 const Index = () => {
-  // Demo data for the application
   const [soilData, setSoilData] = useState({
     ph: 6.5,
     nitrogen: 45,
@@ -24,9 +23,110 @@ const Index = () => {
 
   const [selectedCrop, setSelectedCrop] = useState("");
 
-  // Handler for crop selection
+  // Handler for crop selection that also updates weather data
   const handleCropSelect = (crop: string) => {
     setSelectedCrop(crop);
+    
+    // Update weather data based on crop type
+    const newWeatherData = getWeatherDataForCrop(crop);
+    setWeatherData(newWeatherData);
+  };
+
+  // Helper function to determine weather data based on crop
+  const getWeatherDataForCrop = (crop: string) => {
+    switch (crop) {
+      case "rice":
+        return {
+          temperature: 28,
+          humidity: 85,
+          rainfall: 75,
+          windSpeed: 5,
+        };
+      case "wheat":
+        return {
+          temperature: 22,
+          humidity: 60,
+          rainfall: 45,
+          windSpeed: 12,
+        };
+      case "corn":
+        return {
+          temperature: 26,
+          humidity: 70,
+          rainfall: 55,
+          windSpeed: 8,
+        };
+      case "cotton":
+        return {
+          temperature: 30,
+          humidity: 55,
+          rainfall: 35,
+          windSpeed: 10,
+        };
+      case "sugarcane":
+        return {
+          temperature: 32,
+          humidity: 75,
+          rainfall: 85,
+          windSpeed: 6,
+        };
+      case "potato":
+        return {
+          temperature: 20,
+          humidity: 65,
+          rainfall: 40,
+          windSpeed: 7,
+        };
+      case "tomato":
+        return {
+          temperature: 25,
+          humidity: 70,
+          rainfall: 45,
+          windSpeed: 6,
+        };
+      case "onion":
+        return {
+          temperature: 22,
+          humidity: 60,
+          rainfall: 35,
+          windSpeed: 8,
+        };
+      case "soybean":
+        return {
+          temperature: 27,
+          humidity: 65,
+          rainfall: 50,
+          windSpeed: 9,
+        };
+      case "sunflower":
+        return {
+          temperature: 24,
+          humidity: 55,
+          rainfall: 40,
+          windSpeed: 11,
+        };
+      case "barley":
+        return {
+          temperature: 18,
+          humidity: 60,
+          rainfall: 45,
+          windSpeed: 10,
+        };
+      case "chickpea":
+        return {
+          temperature: 23,
+          humidity: 50,
+          rainfall: 30,
+          windSpeed: 8,
+        };
+      default:
+        return {
+          temperature: 24,
+          humidity: 65,
+          rainfall: 35,
+          windSpeed: 8,
+        };
+    }
   };
 
   return (
